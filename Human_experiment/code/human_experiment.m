@@ -7,7 +7,7 @@ load( ['Human_experiment\MC_light_model\ColorBase_s\ColorBase_s.mat' ] );
 load( ['Substance_spectra\spectrum_Hb_Cope.mat' ] );
 load( ['Substance_spectra\spectrum_HbO2_Cope.mat' ] );
 load( ['Substance_spectra\spectrum_H2O.mat' ] );
-
+%%
 figure
 show_index = round( randperm( size( ColorBase_s, 1 ),7000 ) );
 plot( 700 : 10 : 900, ColorBase_s( show_index, : )'./sum( ColorBase_s( show_index, : )',1 ),'Color',[0.6,0.6,0.6] );
@@ -27,17 +27,10 @@ for l = 1 : length({dirall_experiment.name})
     subplot(1,3,1);
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'artery' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 1;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
@@ -51,17 +44,10 @@ for l = 1 : length({dirall_experiment.name})
     subplot(1,3,2);
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'vein' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 2;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
@@ -75,18 +61,11 @@ for l = 1 : length({dirall_experiment.name})
     subplot(1,3,3);
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'other_vessel' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 3;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
@@ -109,18 +88,11 @@ for l = 1 : length({dirall_experiment.name})
    
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'punture' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 4;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
@@ -142,18 +114,11 @@ for l = 1 : length({dirall_experiment.name})
    
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'brachial_and_neck_artery' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 5;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
@@ -166,18 +131,11 @@ for l = 1 : length({dirall_experiment.name})
    
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'brachial_and_neck_vein' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 6;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
@@ -190,18 +148,11 @@ for l = 1 : length({dirall_experiment.name})
    
     num = num + 1
     load( ['Human_experiment\Data\PAspectra_withdraw' '\' 'brachial_and_neck_vessel' '\' dirall_experiment( l ).name ] );
-    Image_array_800_diff{ num }       = Image_800;
-    Mask_array_diff     { num }       = Mask;
     
     spectrum_mean_array_diff(num, :)  = spectrum_mean .* water_compen;
     spectrum_std_array_diff (num, :)  = spectrum_std  .* water_compen;
     
     spectrum_index_diff      (num) = 7;
-    X_array_diff             (num) = X;
-    Y_array_diff             (num) = Y;
-    
-    start_ex_array ( num ) = start_ex;
-    name_array{ num }           = dirall_experiment( l ).name;
     
     plot(wavelengths, spectrum_mean_array_diff(num, :)/norm(spectrum_mean_array_diff(num, :)),'--','Linewidth',1 );
     hold on
