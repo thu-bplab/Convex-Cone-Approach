@@ -1,5 +1,6 @@
 %%
 %show the fitting result
+load("Phantom_experiment\Results\Results_phantom.mat");
 width = 1.8;
 
 figure
