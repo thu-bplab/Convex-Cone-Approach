@@ -15,4 +15,4 @@ Phantom_experiment: Data, Procedures, and Results of Biomimetic Experiments
 
 Human_experiment: Human experimental data, procedures, and results
 
-If more detailed data is needed, further communication can be made through editor.
+If more detailed data is needed, further communication can be made through email wuch22@mails.tsinghua.edu.cn.
