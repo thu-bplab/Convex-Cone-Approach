@@ -78,50 +78,35 @@ spectrum_mean_array(1,:) = spectrum_mean.*water_reversal_compensation;
 spectrum_std_array(1,:)  = spectrum_std.*water_reversal_compensation;
 spectrum_absorp(1,:)     = spectrum_Hb * (1 - SO2_gold(1)) + spectrum_HbO2 * SO2_gold(1);
 spectrum_fluence(1, :)   = spectrum_mean ./ spectrum_absorp(1,:).*water_reversal_compensation;
-Mask_array_diff{ 1 }     = Mask;
-X_array_diff( 1 )        = X;
-Y_array_diff( 1 )        = Y;
-start_ex_array ( 1 )     = start_ex;
+
 
 load(  ['Phantom_experiment' '\' 'Data' '\' 'PAspectra_withdraw' '\' '25%.mat' ] ) ;
 spectrum_mean_array(2,:) = spectrum_mean.*water_reversal_compensation;
 spectrum_std_array(2,:)  = spectrum_std.*water_reversal_compensation;
 spectrum_absorp(2,:)     = spectrum_Hb * (1 - SO2_gold(2)) + spectrum_HbO2 * SO2_gold(2);
 spectrum_fluence(2, :)   = spectrum_mean ./ spectrum_absorp(2,:).*water_reversal_compensation;
-Mask_array_diff{ 2 }     = Mask;
-X_array_diff( 2 )        = X;
-Y_array_diff( 2 )        = Y;
-start_ex_array ( 2 )     = start_ex;
+
 
 load(  ['Phantom_experiment' '\' 'Data' '\' 'PAspectra_withdraw' '\' '50%.mat' ] ) ;
 spectrum_mean_array(3,:) = spectrum_mean.*water_reversal_compensation;
 spectrum_std_array(3,:)  = spectrum_std.*water_reversal_compensation;
 spectrum_absorp(3,:)     = spectrum_Hb * (1 - SO2_gold(3)) + spectrum_HbO2 * SO2_gold(3);
 spectrum_fluence(3, :)   = spectrum_mean ./ spectrum_absorp(3,:).*water_reversal_compensation;
-Mask_array_diff{ 3 }     = Mask;
-X_array_diff( 3 )        = X;
-Y_array_diff( 3 )        = Y;
-start_ex_array ( 3 )     = start_ex;
+
 
 load(  ['Phantom_experiment' '\' 'Data' '\' 'PAspectra_withdraw' '\' '75%.mat' ] ) ;
 spectrum_mean_array(4,:) = spectrum_mean.*water_reversal_compensation;
 spectrum_std_array(4,:)  = spectrum_std.*water_reversal_compensation;
 spectrum_absorp(4,:)     = spectrum_Hb * (1 - SO2_gold(4)) + spectrum_HbO2 * SO2_gold(4);
 spectrum_fluence(4, :)   = spectrum_mean ./ spectrum_absorp(4,:).*water_reversal_compensation;
-Mask_array_diff{ 4 }     = Mask;
-X_array_diff( 4 )        = X;
-Y_array_diff( 4 )        = Y;
-start_ex_array ( 4 )     = start_ex;
+
 
 load(  ['Phantom_experiment' '\' 'Data' '\' 'PAspectra_withdraw' '\' '100%.mat' ] ) ;
 spectrum_mean_array(5,:) = spectrum_mean.*water_reversal_compensation;
 spectrum_std_array(5,:)  = spectrum_std.*water_reversal_compensation;
 spectrum_absorp(5,:)     = spectrum_Hb * (1 - SO2_gold(5)) + spectrum_HbO2 * SO2_gold(5);
 spectrum_fluence(5, :)   = spectrum_mean ./ spectrum_absorp(5,:).*water_reversal_compensation;
-Mask_array_diff{ 5 }     = Mask;
-X_array_diff( 5 )        = X;
-Y_array_diff( 5 )        = Y;
-start_ex_array ( 5 )     = start_ex;
+
 
 figure
 for i = 1 : size( spectrum_fluence, 1 )
